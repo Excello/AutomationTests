@@ -3,9 +3,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 /**
  * Created by Englich on 27.07.2017.
+ *
  */
 public class TestData {
     public static WebDriver driver;

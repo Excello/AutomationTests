@@ -1,16 +1,14 @@
 package waiters;
-
 import core.TestData;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static java.lang.Thread.sleep;
-
 /**
  * Created by Englich on 30.09.2017.
+ *
  */
 public class Waiters {
     public static void WaiterForPage() {

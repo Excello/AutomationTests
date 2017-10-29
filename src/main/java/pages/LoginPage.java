@@ -1,12 +1,11 @@
 package pages;
-
 import locators.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import waiters.Waiters;
-
 /**
  * Created by Englich on 28.07.2017.
+ *
  */
 public class LoginPage {
     private static By LOGIN = Locators.get("Login");
@@ -19,13 +18,10 @@ public class LoginPage {
         driver.findElement(EMAIL_FIELD).sendKeys(myValidEmail);
         driver.findElement(CREATE_ACCOUNT_BUTTON).click();
     }
-
     public static void validLogin(WebDriver driver, String myLogin, String myPassword) {
         Waiters.WaiterForPage();
         driver.findElement(LOGIN).sendKeys(myLogin);
         driver.findElement(PASSWORD).sendKeys(myPassword);
         driver.findElement(LOG_IN_BUTTON).click();
     }
-
-
 }
