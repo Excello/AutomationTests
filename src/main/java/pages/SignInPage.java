@@ -7,10 +7,10 @@ import waiters.Waiters;
  * Created by Englich on 28.07.2017.
  *
  */
-public class LoginPage {
+public class SignInPage {
     private static By LOGIN = Locators.get("Login");
     private static By PASSWORD = Locators.get("Password");
-    private static By LOG_IN_BUTTON = Locators.get("LoginButton");
+    private static By SIGN_IN_BUTTON = Locators.get("SignInButton");
     private static By EMAIL_FIELD = Locators.get("EmailAddressField");
     private static By CREATE_ACCOUNT_BUTTON = Locators.get("CreateAccountButton");
 
@@ -22,6 +22,6 @@ public class LoginPage {
         Waiters.WaiterForPage();
         driver.findElement(LOGIN).sendKeys(myLogin);
         driver.findElement(PASSWORD).sendKeys(myPassword);
-        driver.findElement(LOG_IN_BUTTON).click();
+        driver.findElement(SIGN_IN_BUTTON).click();
     }
 }

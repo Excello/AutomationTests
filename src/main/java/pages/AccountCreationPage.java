@@ -1,6 +1,11 @@
 package pages;
+
 import locators.Locators;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
+import static core.TestData.driver;
+
 /**
  * Created by Englich on 29.10.2017.
  *
@@ -21,6 +26,18 @@ public class AccountCreationPage {
     private static By ADDITIONAL_INFO = Locators.get("AdditionalInfo");
     private static By HOME_PHONE = Locators.get("HomePhone");
     private static By MOBILE_PHONE = Locators.get("MobilePhone");
+    private static By COUNTRY = Locators.get("Country");
 
-
+    public static void validCreation(String myFirstname, String myLastname, String myPassword, String myState,
+                                     String myAddress, String myCity, String myZipcode, String myMobilephone) {
+        driver.findElement(FIRST_NAME).sendKeys(myFirstname);
+        driver.findElement(LAST_NAME).sendKeys(myLastname);
+        driver.findElement(PASSWORD).sendKeys(myPassword);
+        driver.findElement(ADDRESS).sendKeys(myAddress);
+        driver.findElement(CITY).sendKeys(myCity);
+        driver.findElement(ZIP_CODE).sendKeys(myZipcode);
+        Select select = new Select(driver.findElement(STATE));
+        select.selectByValue(myState);
+        driver.findElement(MOBILE_PHONE).sendKeys(myMobilephone);
+    }
 }

@@ -8,7 +8,7 @@ import waiters.Waiters;
  *
  */
 public class MainPage {
-    private static By SIGN_IN = Locators.get("SignInButton");
+    private static By SIGN_IN = Locators.get("SignInLink");
     private static By USERNAME = Locators.get("Username");
     private static By USERNAME_LIST = Locators.get("UsernamePreview");
 
